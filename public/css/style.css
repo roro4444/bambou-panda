@@ -29,7 +29,6 @@ img {
     height: auto;
 }
 
-
 /* Classes Utilitaires */
 .container {
     max-width: 1200px;
@@ -178,6 +177,30 @@ main h2 {
 #who-are-we-text h2 {
     text-align: left;
 }
+
+/* Shops */
+
+#shops {
+    margin: 4em 0;
+}
+
+.shops-card {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    margin: 1em;
+    padding: 1em;
+}
+
+.shops-card h2 {
+    color: #4C9632;
+    font-size: 1.8em;
+}
+
+.shops-card p {
+    font-size: 1.2em;
+}
+
 
 /* Page CGV */
 
