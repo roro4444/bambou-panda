@@ -172,7 +172,7 @@ main {
 }
 
 #hero {
-    background-image: url("./public/img/bambou-panda-hero.jpg");
+    background-image: url("/public/img/bambou-panda-hero.jpg");
     background-size: cover;
     padding: 150px 10px;
     height: 400px;
