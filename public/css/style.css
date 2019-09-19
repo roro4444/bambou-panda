@@ -193,6 +193,10 @@ main h2 {
     text-align: center;
 }
 
+#new-products {
+    margin: 2em 0 4em 0;
+}
+
 /* Who-are-we */
 
 #who-are-we {
@@ -318,13 +322,15 @@ button[type=reset] {
     margin-bottom: 4em;
 }
 
-.catalogue .card {
+/* Card */
+
+.card {
     text-align: center;
     display: flex;
     margin: 0.5em 3em;
 }
 
-.catalogue .zoom-img {
+.card .zoom-img {
     overflow: hidden;
 }
 
@@ -336,19 +342,19 @@ button[type=reset] {
     transform: scale(1.15);
 }
 
-.catalogue h3 {
+.card h3 {
     text-transform: uppercase;
 }
 
 
-.catalogue .price {
+.card .price {
     font-size: 1.5em;
     margin: 0.5em;
     font-weight: bold;
     color: #4C9632;
 }
 
-.catalogue button {
+.card button {
     width: 100%;
     margin: 0;
     border-radius: 0;
@@ -356,7 +362,7 @@ button[type=reset] {
     background-color: #353535;
 }
 
-.catalogue button:hover {
+.card button:hover {
     box-shadow: none;
     letter-spacing: normal;
     background-color: #4C9632;
