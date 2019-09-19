@@ -38,6 +38,7 @@ img {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     padding: 0 15px;
 }
 
@@ -89,13 +90,17 @@ header {
     padding: 0.8em 2em;
 }
 
+#nav {
+    align-items: center;
+    justify-content: center;
+}
+
 #brand-logo {
     display: flex;
     align-items: center;
-}
-
-nav {
-    width: 100%;
+    justify-content: center;
+    margin-right: auto;
+    flex-basis: 220px;
 }
 
 #nav-primary {
@@ -103,7 +108,7 @@ nav {
     justify-content: flex-end;
     align-items: center;
     height: 100px;
-    padding-right: 3em;
+    padding-right: 4em;
     font-size: 1.5em;
     font-weight: 400;
     text-transform: uppercase;
@@ -179,7 +184,7 @@ footer a:hover {
 /* Page Accueil */
 
 main {
-    margin-top: 145px;
+    margin-top: 160px;
 }
 
 #hero {
@@ -386,4 +391,26 @@ button[type=reset] {
     box-shadow: none;
     letter-spacing: normal;
     background-color: #4C9632;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 967px) {
+    header {
+        height: 210px;
+    }
+
+    #brand-logo {
+        margin: 0 auto;
+    }
+
+    #nav-primary {
+        height: 80px;
+    }
+
+    main {
+        margin-top: 225px;
+    }
+
+
 }
