@@ -64,6 +64,15 @@ img {
     margin: 0 auto;
 }
 
+.mt-auto {
+    margin-top: auto;
+}
+
+.card {
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
 /* Header */
 
 header {
@@ -71,6 +80,7 @@ header {
     position: fixed;
     width: 100%;
     height: 145px;
+    z-index: 100;
 }
 
 #nav-secondary {
@@ -128,7 +138,7 @@ header a:hover {
 .breadcrumb li:last-child a {
     color: #4C9632;
     text-decoration: underline #4C9632;
-    
+
 }
 
 .breadcrumb li+li::before {
@@ -210,20 +220,13 @@ main h2 {
     margin: 4em 0;
 }
 
-.shops-card {
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 0.5em;
-    margin: 1em;
-    padding: 1em;
-}
 
-.shops-card h2 {
+#shops h2 {
     color: #4C9632;
     font-size: 1.8em;
 }
 
-.shops-card p {
+#shops p {
     font-size: 1.2em;
 }
 
@@ -307,4 +310,54 @@ button[type=submit] {
 
 button[type=reset] {
     background-color: rgba(53, 53, 53, 0.9);
+}
+
+/* Pages Catalogue */
+
+.catalogue {
+    margin-bottom: 4em;
+}
+
+.catalogue .card {
+    text-align: center;
+    display: flex;
+    margin: 0.5em 3em;
+}
+
+.catalogue .zoom-img {
+    overflow: hidden;
+}
+
+.zoom-img img {
+    transition: all 1s ease;
+}
+
+.zoom-img img:hover {
+    transform: scale(1.15);
+}
+
+.catalogue h3 {
+    text-transform: uppercase;
+}
+
+
+.catalogue .price {
+    font-size: 1.5em;
+    margin: 0.5em;
+    font-weight: bold;
+    color: #4C9632;
+}
+
+.catalogue button {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    font-size: 1.6em;
+    background-color: #353535;
+}
+
+.catalogue button:hover {
+    box-shadow: none;
+    letter-spacing: normal;
+    background-color: #4C9632;
 }
