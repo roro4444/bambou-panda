@@ -73,6 +73,7 @@ img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
+
 /* Header */
 
 header {
@@ -182,6 +183,10 @@ main {
 }
 
 #hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     background-image: url("../../public/img/bambou-panda-hero.jpg");
     background-size: cover;
     padding: 150px 10px;
@@ -189,8 +194,18 @@ main {
     color: #f2f2f2;
 }
 
+#hero h2 {
+    text-transform: uppercase;
+}
+
+#hero button {
+    background-color: #353535;
+    font-size: 1.3em;
+}
+
 main h2 {
     text-align: center;
+    font-size: 2.2em;
 }
 
 #new-products {
@@ -222,6 +237,10 @@ main h2 {
 
 #shops {
     margin: 4em 0;
+}
+
+#shops div[class*=col] {
+    padding: 0 1em 1em 1em;
 }
 
 
@@ -321,6 +340,7 @@ button[type=reset] {
 .catalogue {
     margin-bottom: 4em;
 }
+
 
 /* Card */
 
