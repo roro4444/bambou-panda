@@ -1,0 +1,13 @@
+/* New products */
+
+#new-products-blocs h3 {
+    text-align: center;
+}
+
+#new-products-blocs>div {
+    border: 1px solid black;
+    border-radius: 0.5em;
+    margin: 1em;
+    padding: 1em;
+
+}
