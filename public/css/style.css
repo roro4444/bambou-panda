@@ -314,7 +314,9 @@ button[type=reset] {
 
 /* Pages Catalogue */
 
-
+.catalogue {
+    margin-bottom: 4em;
+}
 
 .catalogue .card {
     text-align: center;
