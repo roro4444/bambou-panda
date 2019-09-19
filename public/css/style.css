@@ -111,6 +111,32 @@ header a:hover {
     border-bottom: none;
 }
 
+/* Breadcrumb */
+
+.breadcrumb {
+    padding: 1em;
+}
+
+.breadcrumb li {
+    display: inline;
+}
+
+.breadcrumb li a {
+    color: black;
+}
+
+.breadcrumb li:last-child a {
+    color: #4C9632;
+    text-decoration: underline #4C9632;
+    
+}
+
+.breadcrumb li+li::before {
+    padding: 0.5em;
+    color: black;
+    content: "/\00a0";
+}
+
 /* Footer */
 
 footer {
@@ -235,14 +261,15 @@ textarea {
     border: 2px solid black;
 }
 
-input[type=checkbox], label[for=cgv-validation] {
+input[type=checkbox],
+label[for=cgv-validation] {
     display: inline;
     width: auto;
     padding: 0;
 }
 
 label[for=cgv-validation]>a {
-    color:#000;
+    color: #000;
     font-weight: bold;
 }
 
