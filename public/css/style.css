@@ -39,22 +39,23 @@ img {
 .row {
     display: flex;
     flex-wrap: wrap;
+    box-sizing: border-box;
     padding: 0 15px;
+    width: 100%;
 }
 
 .col {
     flex-direction: column;
+    box-sizing: border-box;
     width: 100%;
 }
 
 .col-50 {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
+    box-sizing: border-box;
     width: 50%;
-}
-
-.col-33 {
-    flex-direction: column;
-    width: 33.33%;
 }
 
 .text-center {
@@ -68,12 +69,6 @@ img {
 .mt-auto {
     margin-top: auto;
 }
-
-.card {
-    margin: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-}
-
 
 /* Header */
 
@@ -224,6 +219,14 @@ main h2 {
     color: #f2f2f2;
 }
 
+.who-are-we-bloc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 50%;
+}
+
 #who-are-we-img {
     display: block;
     max-width: 200px;
@@ -231,11 +234,14 @@ main h2 {
 }
 
 #who-are-we-text {
-    margin: 2.5em;
+    padding: 2.5em;
 }
 
 #who-are-we-text h2 {
     text-align: left;
+}
+#who-are-we-text p {
+    text-align: justify;
 }
 
 /* Shops */
@@ -350,9 +356,13 @@ button[type=reset] {
 /* Card */
 
 .card {
-    text-align: center;
     display: flex;
-    margin: 0.5em 3em;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 30%;
+    margin: 0.5em 1%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 .card .zoom-img {
@@ -395,6 +405,8 @@ button[type=reset] {
 
 /* Responsive */
 
+/* Fix header break */
+
 @media screen and (max-width: 967px) {
     header {
         height: 210px;
@@ -411,6 +423,33 @@ button[type=reset] {
     main {
         margin-top: 225px;
     }
+}
 
+
+@media screen and (max-width: 568px) {
+    #nav-primary a {
+        margin-left: 2em;
+    }
+    #nav-primary {
+        padding-right: 2em;
+    }
+}
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+    .who-are-we-bloc {
+        width: 100%;
+    }
+
+    #who-are-we-text {
+        padding-top: 0;
+    }
+
+    #who-are-we-text h2 {
+        text-align: center;
+    }
 
 }
+
+/*  */
