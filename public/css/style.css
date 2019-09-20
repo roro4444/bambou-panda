@@ -38,23 +38,19 @@ img {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
     padding: 0 15px;
+    width: 100%;
 }
 
 .col {
     flex-direction: column;
+    box-sizing: border-box;
     width: 100%;
 }
 
-.col-50 {
-    flex-direction: column;
-    width: 50%;
-}
 
-.col-33 {
-    flex-direction: column;
-    width: 33.33%;
-}
 
 .text-center {
     text-align: center;
@@ -68,12 +64,6 @@ img {
     margin-top: auto;
 }
 
-.card {
-    margin: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-}
-
-
 /* Header */
 
 header {
@@ -85,17 +75,25 @@ header {
 }
 
 #nav-secondary {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
     justify-content: space-between;
     padding: 0.8em 2em;
+}
+
+#nav {
+    align-items: center;
+    justify-content: center;
 }
 
 #brand-logo {
     display: flex;
     align-items: center;
-}
-
-nav {
-    width: 100%;
+    justify-content: center;
+    margin-right: auto;
+    flex-basis: 220px;
 }
 
 #nav-primary {
@@ -103,7 +101,7 @@ nav {
     justify-content: flex-end;
     align-items: center;
     height: 100px;
-    padding-right: 3em;
+    padding-right: 4em;
     font-size: 1.5em;
     font-weight: 400;
     text-transform: uppercase;
@@ -179,7 +177,7 @@ footer a:hover {
 /* Page Accueil */
 
 main {
-    margin-top: 145px;
+    margin-top: 160px;
 }
 
 #hero {
@@ -219,6 +217,14 @@ main h2 {
     color: #f2f2f2;
 }
 
+.who-are-we-bloc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 50%;
+}
+
 #who-are-we-img {
     display: block;
     max-width: 200px;
@@ -226,11 +232,15 @@ main h2 {
 }
 
 #who-are-we-text {
-    margin: 2.5em;
+    padding: 2.5em;
 }
 
 #who-are-we-text h2 {
     text-align: left;
+}
+
+#who-are-we-text p {
+    text-align: justify;
 }
 
 /* Shops */
@@ -265,6 +275,15 @@ main h2 {
 }
 
 /* Page de commande */
+
+.commande-bloc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 75%;
+    margin: 0 auto;
+}
 
 fieldset {
     margin: 1em 0;
@@ -345,9 +364,13 @@ button[type=reset] {
 /* Card */
 
 .card {
-    text-align: center;
     display: flex;
-    margin: 0.5em 3em;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 1 1 30%;
+    margin: 0.5em 1%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 .card .zoom-img {
@@ -386,4 +409,87 @@ button[type=reset] {
     box-shadow: none;
     letter-spacing: normal;
     background-color: #4C9632;
+}
+
+/* Responsive */
+
+/* Fix header break */
+
+@media screen and (max-width: 967px) {
+    header {
+        height: 210px;
+    }
+
+    #brand-logo {
+        margin: 0 auto;
+    }
+
+    nav {
+        margin: 0 auto;
+    }
+
+    #nav-primary {
+        height: 80px;
+    }
+
+    main {
+        margin-top: 225px;
+    }
+}
+
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+
+    .who-are-we-bloc {
+        width: 100%;
+    }
+
+    #who-are-we-text {
+        padding-top: 0;
+    }
+
+    #who-are-we-text h2 {
+        text-align: center;
+    }
+
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 568px) {
+
+    #nav-primary a {
+        margin-left: 2em;
+    }
+
+    #nav-primary {
+        padding-right: 2em;
+        font-size: 1.2em;
+    }
+
+    .card {
+        flex: 1 1 50%;
+    }
+
+    .commande-bloc {
+        width: 100%;
+    }
+
+    #hero h2 {
+        font-size: 1.6em;
+    }
+
+    #hero button {
+        font-size: 1em;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #nav-secondary {
+        padding: 1em 0;
+    }
 }
