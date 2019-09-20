@@ -50,13 +50,7 @@ img {
     width: 100%;
 }
 
-.col-50 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 50%;
-}
+
 
 .text-center {
     text-align: center;
@@ -81,6 +75,10 @@ header {
 }
 
 #nav-secondary {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
     justify-content: space-between;
     padding: 0.8em 2em;
 }
@@ -240,6 +238,7 @@ main h2 {
 #who-are-we-text h2 {
     text-align: left;
 }
+
 #who-are-we-text p {
     text-align: justify;
 }
@@ -276,6 +275,15 @@ main h2 {
 }
 
 /* Page de commande */
+
+.commande-bloc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 75%;
+    margin: 0 auto;
+}
 
 fieldset {
     margin: 1em 0;
@@ -359,7 +367,7 @@ button[type=reset] {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    width: 30%;
+    flex: 1 1 30%;
     margin: 0.5em 1%;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
@@ -416,6 +424,10 @@ button[type=reset] {
         margin: 0 auto;
     }
 
+    nav {
+        margin: 0 auto;
+    }
+
     #nav-primary {
         height: 80px;
     }
@@ -426,18 +438,10 @@ button[type=reset] {
 }
 
 
-@media screen and (max-width: 568px) {
-    #nav-primary a {
-        margin-left: 2em;
-    }
-    #nav-primary {
-        padding-right: 2em;
-    }
-}
-
 /* Tablet */
 
 @media screen and (max-width: 768px) {
+
     .who-are-we-bloc {
         width: 100%;
     }
@@ -452,4 +456,40 @@ button[type=reset] {
 
 }
 
-/*  */
+
+/* Mobile */
+
+@media screen and (max-width: 568px) {
+
+    #nav-primary a {
+        margin-left: 2em;
+    }
+
+    #nav-primary {
+        padding-right: 2em;
+        font-size: 1.2em;
+    }
+
+    .card {
+        flex: 1 1 50%;
+    }
+
+    .commande-bloc {
+        width: 100%;
+    }
+
+    #hero h2 {
+        font-size: 1.6em;
+    }
+
+    #hero button {
+        font-size: 1em;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #nav-secondary {
+        padding: 1em 0;
+    }
+}
